@@ -20,6 +20,7 @@ export default {
     ],
     external: [
         'plugins-core',
-        '@angular/core'
+        '@angular/core',
+        '@angular/forms'
     ]
 }

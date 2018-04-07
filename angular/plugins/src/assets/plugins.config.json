@@ -4,12 +4,32 @@
     "paths": {
       "npm:": "https://unpkg.com/"
     },
+    "transpiler": "mytranspiler.js",
     "map": {
-      "@angular/core": "npm:@angular/core/bundles/core.umd.js",
-      "rxjs": "npm:rxjs",
+      "__@angular/core": "npm:@angular/core/bundles/core.umd.js",
+      "__@angular/common": "npm:@angular/common/bundles/common.umd.js",
+      "__@angular/forms": "npm:@angular/forms/bundles/forms.umd.js",
+      "__@angular/platform-browser": "npm:@angular/platform-browser/bundles/platform-browser.umd.js",
+      "__rxjs": "npm:rxjs",
 
       "plugins-core": "/modules/plugins-core/bundle.js",
       "plugins-example": "/modules/plugins-example/bundle.js"
+    },
+    "packages": {
+      "@angular/core": {
+        "meta": {
+          "*": {
+            "loader": "mytranspiler.js"
+          }
+        }
+      },
+      "@angular/forms": {
+        "meta": {
+          "*": {
+            "loader": "mytranspiler.js"
+          }
+        }
+      }
     }
   },
   "sidebar": {
