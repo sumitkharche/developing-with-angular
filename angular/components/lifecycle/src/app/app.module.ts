@@ -10,6 +10,7 @@ import { AfterContentInitDemoComponent } from './after-content-init-demo/after-c
 import { AfterContentInitChildComponent } from './after-content-init-child/after-content-init-child.component';
 import { AfterViewInitDemoComponent } from './after-view-init-demo/after-view-init-demo.component';
 import { OnDestroyDemoComponent } from './on-destroy-demo/on-destroy-demo.component';
+import { SimpleService } from './on-destroy-demo/simple.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { OnDestroyDemoComponent } from './on-destroy-demo/on-destroy-demo.compon
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SimpleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
