@@ -21,5 +21,11 @@ export class ListComponent implements AfterContentInit {
     this.listItems.forEach(item => {
       item.title = item.title + ' (' + new Date().toLocaleDateString() + ')';
     });
+
+    this.listItems.changes.subscribe(() => {
+      console.log(
+        `List content changed and has now ${this.listItems.length} items.`
+      );
+    });
   }
 }

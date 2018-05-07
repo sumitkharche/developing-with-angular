@@ -9,6 +9,8 @@ import { ListItemComponent } from './list-item/list-item.component';
 })
 export class AppComponent implements AfterViewInit {
 
+  showFirstItem = true;
+
   @ViewChild(ListComponent)
   list: ListComponent;
 

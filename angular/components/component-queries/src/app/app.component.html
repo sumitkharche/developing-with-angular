@@ -1,5 +1,5 @@
 <app-list>
-  <app-list-item></app-list-item>
+  <app-list-item *ngIf="showFirstItem"></app-list-item>
   <app-list-item></app-list-item>
   <app-list-item></app-list-item>
 </app-list>
@@ -7,7 +7,13 @@
 <hr>
 
 <app-list>
-  <app-list-item></app-list-item>
+  <app-list-item *ngIf="showFirstItem"></app-list-item>
   <app-list-item></app-list-item>
   <app-list-item></app-list-item>
 </app-list>
+
+<hr>
+
+<button (click)="showFirstItem = !showFirstItem">
+  Toggle first item
+</button>
