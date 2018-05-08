@@ -1,0 +1,15 @@
+<h1>Http Examples</h1>
+
+<h2>Get data</h2>
+
+<section>
+  <button (click)="getPost()">Get as JSON</button>
+  <button (click)="getPostAsync()">Get as JSON (async/await)</button>
+  <div>Title: {{ post?.title }}</div>
+  <div>Body: {{ post?.body }}</div>
+</section>
+
+<section>
+  <button (click)="getPostAsText()">Get as Text</button>
+  <div>{{ postText }}</div>
+</section>
